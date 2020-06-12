@@ -8,6 +8,7 @@ suppressPackageStartupMessages({
 })
 ```
 
+-- Comparison text here. --
 
 ```{r echo = F}
 line_sum <- read_rds('processed_data/length_summary.rds') %>% 
