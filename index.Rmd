@@ -14,12 +14,20 @@ suppressPackageStartupMessages({
 })
 ```
 
+  
+-- Overview text about tortoise release here. --
+  
+  
 
 ```{r echo=F, width = 60, height = 30}
 lines <- read_rds('processed_data/lines.rds')
 
+tpal <- colorFactor(viridis::viridis(15), lines$id)
+
 leaflet(width = "100%") %>%
   addTiles() %>%  # Add default OpenStreetMap map tiles
-  addMarkers(lng=174.768, lat=-36.852, popup="The birthplace of R")
+  addPolylines(data = lines,
+               color = ~tpal(lines$id),
+               weight = 1)
 
 ```
