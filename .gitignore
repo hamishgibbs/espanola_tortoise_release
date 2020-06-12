@@ -1,5 +1,8 @@
 # History files
 **/.DS_Store
+_site/**/*.csv
+_site/**/*.rds
+
 .Rhistory
 .Rapp.history
 

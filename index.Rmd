@@ -1,0 +1,25 @@
+---
+title: "Overview"
+output: 
+  html_document:
+    includes:
+       in_header: GA_Script.html
+---
+
+```{r echo=F}
+suppressPackageStartupMessages({
+  require(sf)
+  require(leaflet)
+  require(dplyr)
+})
+```
+
+
+```{r echo=F, width = 60, height = 30}
+lines <- read_rds('processed_data/lines.rds')
+
+leaflet(width = "100%") %>%
+  addTiles() %>%  # Add default OpenStreetMap map tiles
+  addMarkers(lng=174.768, lat=-36.852, popup="The birthplace of R")
+
+```

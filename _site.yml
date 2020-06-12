@@ -1,0 +1,11 @@
+name: "espanola-tortoise-release"
+navbar:
+  title: "Española release 2020"
+  left:
+    - text: "Overview"
+      href: index.html
+    - text: "Tortoise comparison"
+      href: tortoise_comparison.html
+    - text: "About"
+      href: about.html
+      
