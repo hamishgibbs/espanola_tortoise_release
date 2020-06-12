@@ -2,4 +2,23 @@
 title: "Tortoise comparison"
 ---
 
-Hello.
+```{r echo = F}
+suppressPackageStartupMessages({
+  require(plotly)
+})
+```
+
+
+```{r echo = F}
+line_sum <- read_rds('processed_data/length_summary.rds') %>% 
+  dplyr::arrange(length) %>% 
+  mutate(id = factor(id, levels = id))
+
+tpal <- colorFactor(viridis::viridis(15), lines$id)
+
+plot_ly(line_sum, x = ~length, y = ~id, type = 'bar', orientation = 'h',
+        marker = list(color = ~tpal(line_sum$id))) %>% 
+  layout(xaxis = list(title = "Length"),
+         yaxis = list(title = "Tortoise id"))
+
+```
