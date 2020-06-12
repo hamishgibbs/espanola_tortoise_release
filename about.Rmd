@@ -6,3 +6,5 @@ More about this website.
 
 
 Research supported by: 
+
+[![](https://www.galapagos.org/wp-includes/images/logo.png)](https://www.galapagos.org/)
