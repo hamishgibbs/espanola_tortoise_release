@@ -1,4 +1,5 @@
 name: "espanola-tortoise-release"
+output_dir: "docs"
 navbar:
   title: "Española release 2020"
   left:
