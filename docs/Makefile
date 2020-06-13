@@ -10,7 +10,7 @@ default: process_data build_website push_site
 
 push_site: ${SITE_DIR}/index.html
 	git add . 
-	git commit -m "automatic website build"
+	git commit -m "automatic site build"
 	git push
 
 build_website: ${SITE_DIR}/index.html
