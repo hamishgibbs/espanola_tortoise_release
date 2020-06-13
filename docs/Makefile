@@ -6,9 +6,12 @@ SITE_DIR := ${PROJDIR}/docs
 R = /usr/local/bin/Rscript $^ $@
 
 
-default: process_data build_website
+default: process_data build_website push_site
 
-test_build: ${SITE_DIR}/index.html
+push_site: ${SITE_DIR}/index.html
+	git add . 
+	git commit -m "automatic website build"
+	git push
 
 build_website: ${SITE_DIR}/index.html
 
