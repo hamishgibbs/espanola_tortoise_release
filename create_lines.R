@@ -9,19 +9,20 @@ if(interactive()){
   .args <- commandArgs(trailingOnly = T)
 }
 
-input_data <- read_csv(.args[1], col_types = cols())
+print('Reading input data.')
+
+input_data <- read_csv(.args[1], col_types = cols()) %>% 
+  tidyr::drop_na("LAST LONGITUDE") %>% 
+  dplyr::rename(id = `ASSET ID`)
 
 #convert to sf
-pts <- st_as_sf(input_data, coords = c("lon", "lat"), crs = 4326)
+pts <- st_as_sf(input_data, coords = c("LAST LONGITUDE", "LAST LATITUDE"), crs = 4326)
 
 lines <- pts %>% 
   group_by(id) %>% 
-  summarize() %>% 
+  summarize(.groups = "keep") %>% 
   st_cast("LINESTRING")
 
 write_rds(lines, tail(.args, 1))
 
-
-
-
-#makefile
+print('Success.')

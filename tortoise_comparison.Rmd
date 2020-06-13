@@ -10,7 +10,7 @@ suppressPackageStartupMessages({
 
 -- Comparison text here. --
 
-```{r echo = F}
+```{r echo = F, warning = FALSE}
 line_sum <- read_rds('processed_data/length_summary.rds') %>% 
   dplyr::arrange(length) %>% 
   mutate(id = factor(id, levels = id))

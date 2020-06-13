@@ -9,6 +9,8 @@ if(interactive()){
   .args <- commandArgs(trailingOnly = T)
 }
 
+print('Reading input data.')
+
 lines <- read_rds(.args[1])
 
 #summary of distance travelled - account for units with real data
@@ -17,3 +19,5 @@ line_sum <- lines %>%
   st_set_geometry(NULL)
 
 write_rds(line_sum, tail(.args, 1))
+
+print('Success.')

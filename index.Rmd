@@ -11,6 +11,7 @@ suppressPackageStartupMessages({
   require(sf)
   require(leaflet)
   require(dplyr)
+  require(readr)
 })
 ```
 
@@ -22,7 +23,7 @@ suppressPackageStartupMessages({
 ```{r echo=F, width = 60, height = 30}
 lines <- read_rds('processed_data/lines.rds')
 
-tpal <- colorFactor(viridis::viridis(15), lines$id)
+tpal <- colorFactor(viridis::viridis(15), as.character(lines$id))
 
 leaflet(width = "100%") %>%
   addTiles() %>%  # Add default OpenStreetMap map tiles
