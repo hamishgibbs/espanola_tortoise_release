@@ -27,9 +27,8 @@ lines <- read_rds('processed_data/lines.rds')
 tpal <- colorFactor(viridis::viridis(15), as.character(lines$id))
 
 leaflet(width = "100%") %>%
-  addTiles() %>%  # Add default OpenStreetMap map tiles
+  addProviderTiles(providers$OpenTopoMap) %>%
   addPolylines(data = lines,
                color = ~tpal(lines$id),
                weight = 1)
-
 ```
