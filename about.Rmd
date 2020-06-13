@@ -16,5 +16,5 @@ DPNG: https://www.galapagos.gob.ec/en/national-park/
 
 GC: https://www.galapagos.org/
 
-Website by Hamish Gibbs. To report an issue with this site, create an [issue](https://github.com/hamishgibbs/espanola_tortoise_release/issues/new).
+Website by Hamish Gibbs. To report a problem with this site, create an [issue](https://github.com/hamishgibbs/espanola_tortoise_release/issues/new).
 
