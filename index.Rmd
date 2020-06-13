@@ -13,6 +13,7 @@ suppressPackageStartupMessages({
   require(leaflet)
   require(dplyr)
   require(readr)
+  require(htmltools)
 })
 ```
 
@@ -30,5 +31,6 @@ leaflet(width = "100%") %>%
   addProviderTiles(providers$OpenTopoMap) %>%
   addPolylines(data = lines,
                color = ~tpal(lines$id),
-               weight = 1)
+               weight = 1,
+               label = ~htmlEscape(lines$id))
 ```
