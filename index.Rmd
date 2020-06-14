@@ -77,6 +77,12 @@ toggleLanguage = function(){
   }
 }
 
+var userLang = navigator.language || navigator.userLanguage; 
+
+if(userLang.includes('es')){
+  toggleLanguage()
+}
+
 ```
 
 ```{r echo=F, width = 60, height = 30}

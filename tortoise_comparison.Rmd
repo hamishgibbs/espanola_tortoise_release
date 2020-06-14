@@ -62,6 +62,10 @@ toggleLanguage = function(){
   }
 }
 
+if(userLang.includes('es')){
+  toggleLanguage()
+}
+
 ```
 
 ```{r echo = F}

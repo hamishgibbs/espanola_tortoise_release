@@ -105,5 +105,9 @@ toggleLanguage = function(){
   }
 }
 
+if(userLang.includes('es')){
+  toggleLanguage()
+}
+
 ```
 
