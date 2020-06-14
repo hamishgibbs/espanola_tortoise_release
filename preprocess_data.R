@@ -19,9 +19,17 @@ input_data <- do.call(rbind, input_data) %>%
   tidyr::drop_na("LAST LONGITUDE") %>% 
   dplyr::rename(id = `ASSET ID`,
                 dt = `LAST SEEN TIME`) %>% 
-  dplyr::mutate(dt = as.POSIXlt(dt))
+  dplyr::mutate(dt = as.POSIXlt(dt)) %>% 
+  distinct()
   #filter greater than a certain date here  
 
+#drop any records with <2 points
+more_than_2_pts <- input_data %>% group_by(id) %>% 
+  summarise(n = n(), .groups='drop') %>% 
+  filter(n >= 2) %>% pull(id)
+
+input_data <- input_data %>% 
+  filter(id %in% more_than_2_pts)
 
 write_rds(input_data, tail(.args, 1))
 

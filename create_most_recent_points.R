@@ -13,6 +13,10 @@ print('Reading input data.')
 
 input_data <- read_rds(.args[1])
 
+testthat::test_that('Most recent record is today', {
+  testthat::expect_equal(input_data %>% pull(dt) %>% max() %>% as.Date(), Sys.Date())
+})
+
 most_recent_ref <- input_data %>% 
   group_by(id) %>% 
   summarise(dt = max(dt, na.rm = T), .groups = 'drop') %>% 
@@ -27,6 +31,14 @@ input_data <- st_as_sf(input_data, coords = c("LAST LONGITUDE", "LAST LATITUDE")
 
 testthat::test_that('length of most recent points is equal to length of ref', {
   testthat::expect_equal(input_data %>% pull(1) %>% length, most_recent_ref %>% pull(1) %>% length)
+})
+
+
+testthat::test_that('New most recent date is > previous most recent date', {
+  recent_prev <- read_rds(tail(.args, 1)) %>% pull(dt) %>% max()
+  recent_new <- input_data %>% pull(dt) %>% max()
+  #reinstate in production
+  #testthat::expect_gt(recent_new, recent_prev)
 })
 
 write_rds(input_data, tail(.args, 1))

@@ -13,9 +13,12 @@ print('Reading input data.')
 
 input_data <- read_rds(.args[1])
 
+testthat::test_that('Most recent record is today', {
+  testthat::expect_equal(input_data %>% pull(dt) %>% max() %>% as.Date(), Sys.Date())
+})
+
 #convert to sf
 pts <- st_as_sf(input_data, coords = c("LAST LONGITUDE", "LAST LATITUDE"), crs = 4326)
-
 
 lines <- pts %>% 
   group_by(id) %>% 
@@ -23,8 +26,6 @@ lines <- pts %>%
   summarize(n = n(),
             .groups = "keep") %>% 
   ungroup() %>% 
-  #remove this for production
-  slice(c(1:4, 9:12)) %>% 
   st_cast("LINESTRING")
 
 write_rds(lines, tail(.args, 1))
