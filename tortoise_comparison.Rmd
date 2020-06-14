@@ -1,14 +1,13 @@
 ---
-title: "The Tortoises"
 ---
+
+<h2>The tortoises</h2>
 
 ```{r echo = F}
 suppressPackageStartupMessages({
   require(plotly)
 })
 ```
-
--- Comparison text here. --
 
 ```{r echo = F, warning = FALSE}
 line_sum <- read_rds('processed_data/length_summary.rds') %>% 

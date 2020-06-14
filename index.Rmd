@@ -1,5 +1,4 @@
 ---
-title: "Tortoise Locations"
 output: 
   html_document:
     includes:
@@ -16,13 +15,12 @@ suppressPackageStartupMessages({
   require(htmltools)
 })
 ```
+ 
 
-  
--- Overview text here. --
-  
-  
+<h2>Tortoise locations</h2>
 
 ```{r echo=F, width = 60, height = 30}
+#replace these with functions to produce the map and plot and duplicate pages for spanish
 lines <- read_rds('processed_data/lines.rds')
 
 tpal <- colorFactor(viridis::viridis(15), as.character(lines$id))
@@ -34,3 +32,5 @@ leaflet(width = "100%") %>%
                weight = 2,
                label = ~htmlEscape(lines$id))
 ```
+
+On June 15th, 2020, 15 Galapagos tortoises were returned to Española island. Use this map to track the tortoises as they explore their home island.
