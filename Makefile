@@ -17,7 +17,7 @@ build_website: ${SITE_DIR}/index.html
 
 process_data: ${DATA_DIR}/lines.rds ${DATA_DIR}/length_summary.rds
 
-${DATA_DIR}/lines.rds: ${PROJDIR}/create_lines.R ${RAW_DIR}/assets_2020-06-13_102331.csv
+${DATA_DIR}/lines.rds: ${PROJDIR}/create_lines.R ${RAW_DIR}
 	${R}
 
 ${DATA_DIR}/length_summary.rds: ${PROJDIR}/create_length_summary.R ${DATA_DIR}/lines.rds

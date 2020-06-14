@@ -10,6 +10,11 @@ This app enables you to track each of the 15 Espanola tortoises (12 females and 
 Undertaken by: 
 Giant Tortoise Restoration Initiative, a collaborative 15-year project (2014-2028) implemented by the Galapagos National Park Directorate and the Galapagos Conservancy with support from visiting scientists from around the world.
 
+<a href="https://www.galapagos.org/conservation/our-work/tortoise-restoration/">
+         <img alt="Qries" src="https://www.qries.com/images/banner_logo.png"
+         width=150" height="70">
+</a>
+
 GTRI: https://www.galapagos.org/conservation/our-work/tortoise-restoration/
 
 DPNG: https://www.galapagos.gob.ec/en/national-park/
