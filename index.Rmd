@@ -31,6 +31,6 @@ leaflet(width = "100%") %>%
   addProviderTiles(providers$OpenTopoMap) %>%
   addPolylines(data = lines,
                color = ~tpal(lines$id),
-               weight = 1,
+               weight = 2,
                label = ~htmlEscape(lines$id))
 ```
