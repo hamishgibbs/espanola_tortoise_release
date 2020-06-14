@@ -79,7 +79,7 @@ tpal <- colorFactor(viridis::viridis(15), lines$id)
 
 plot_ly(line_sum, x = ~length, y = ~id, type = 'bar', orientation = 'h',
         marker = list(color = ~tpal(line_sum$id))) %>% 
-  layout(xaxis = list(title = "Length"),
-         yaxis = list(title = "Tortoise id"))
+  layout(xaxis = list(title = "Distance travelled - Distancia recorrida (km)"),
+         yaxis = list(title=''))
 
 ```

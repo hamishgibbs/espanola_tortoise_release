@@ -82,6 +82,7 @@ toggleLanguage = function(){
 ```{r echo=F, width = 60, height = 30}
 #replace these with functions to produce the map and plot and duplicate pages for spanish
 lines <- read_rds('processed_data/lines.rds')
+recent_pts <- read_rds('processed_data/most_recent_points.rds')
 
 tpal <- colorFactor(viridis::viridis(15), as.character(lines$id))
 
@@ -90,7 +91,13 @@ leaflet(width = "100%") %>%
   addPolylines(data = lines,
                color = ~tpal(lines$id),
                weight = 2,
-               label = ~htmlEscape(lines$id))
+               label = ~htmlEscape(lines$id)) %>% 
+  addCircleMarkers(data = recent_pts,
+                   radius = 4,
+                   fillOpacity = 0.6,
+                   stroke = FALSE,
+                   color = 'green',
+                   label = ~htmlEscape(paste0(recent_pts$id, ' ', recent_pts$dt)))
 ```
 
 <p class="alt-language-text" id="language-active">On June 15th, 2020, 15 Galapagos tortoises were returned to Española island. Use this map to track the tortoises as they explore their home island.</p>
