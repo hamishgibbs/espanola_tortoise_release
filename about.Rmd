@@ -77,8 +77,8 @@ Información</h2>
 </div>
   
     
-<i class="alt-language-text" id="language-active">Website by Hamish Gibbs. To report a problem with this site, visit the <a href="https://github.com/hamishgibbs/espanola_tortoise_release/issues/new">GitHub</a> page.</i>
-<i class="alt-language-text" id="language-inactive">Sitio web por Hamish Gibbs. Para informar un problema con este sitio, visite la página de <a href="https://github.com/hamishgibbs/espanola_tortoise_release/issues/new">GitHub</a>.</i>
+<i class="alt-language-text" id="language-active">Website by Hamish Gibbs. To report a problem with this site, visit the <a href="https://github.com/hamishgibbs/espanola_tortoise_release/issues/new">GitHub</a> page. Last website build `r Sys.time()`.</i>
+<i class="alt-language-text" id="language-inactive">Sitio web por Hamish Gibbs. Para informar un problema con este sitio, visite la página de <a href="https://github.com/hamishgibbs/espanola_tortoise_release/issues/new">GitHub</a>. Actualizado en `r Sys.time()`.</i>
 
 ```{js echo=FALSE}
 toggleLanguage = function(){
