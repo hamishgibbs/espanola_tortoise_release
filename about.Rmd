@@ -11,15 +11,19 @@ Undertaken by:
 Giant Tortoise Restoration Initiative, a collaborative 15-year project (2014-2028) implemented by the Galapagos National Park Directorate and the Galapagos Conservancy with support from visiting scientists from around the world.
 
 <a href="https://www.galapagos.org/conservation/our-work/tortoise-restoration/">
-         <img alt="Qries" src="https://www.qries.com/images/banner_logo.png"
+         <img alt="Qries" src="https://hamishgibbs.github.io/espanola_tortoise_release/images/icon_GTRI.png"
          width=150" height="70">
 </a>
 
-GTRI: https://www.galapagos.org/conservation/our-work/tortoise-restoration/
+<a href="https://www.galapagos.gob.ec/en/national-park/">
+         <img alt="Qries" src="https://hamishgibbs.github.io/espanola_tortoise_release/images/icon_PNG.png"
+         width=150" height="70">
+</a>
 
-DPNG: https://www.galapagos.gob.ec/en/national-park/
-
-GC: https://www.galapagos.org/
+<a href="https://www.galapagos.org/">
+         <img alt="Qries" src="https://hamishgibbs.github.io/espanola_tortoise_release/images/icon_GC.png"
+         width=150" height="70">
+</a>
 
 Website by Hamish Gibbs. To report a problem with this site, create an [issue](https://github.com/hamishgibbs/espanola_tortoise_release/issues/new).
 
