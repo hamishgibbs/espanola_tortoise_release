@@ -15,9 +15,69 @@ suppressPackageStartupMessages({
   require(htmltools)
 })
 ```
- 
 
-<h2>Tortoise locations</h2>
+```{css echo=FALSE}
+#language-active{
+  display: block;
+}
+
+#language-inactive{
+  display: none;
+}
+
+.sub-header-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.sub-header-list-item {
+  float: left;
+}
+
+.sub-header-list-item:last-child { float:right; }
+
+```
+
+<div style="display: table; margin: 0 auto; width: 100%">
+  <ul class="sub-header-list" style="width: 100%; margin: 0; padding: 0;">
+    <li class="sub-header-list-item" list-style-type="none" style="display: inline;">
+      <h2 class="alt-language-text" id="language-active">Tortoise locations</h2>
+      <h2 class="alt-language-text" id="language-inactive">Lugares de tortugas</h2>
+    </li>
+    <li class="sub-header-list-item" list-style-type="none" style="display: inline;">
+      <button id="languageToggleButton" onclick="toggleLanguage()" style="margin-top: 25px;">Español</button>
+    </li>
+  </ul>
+</div>
+
+```{js echo=FALSE}
+toggleLanguage = function(){
+  
+  var language_elements = document.querySelectorAll(".alt-language-text")
+  
+  var i;
+  for (i = 0; i < language_elements.length; i++) {
+    
+    if(language_elements[i].getAttribute('id') == 'language-active'){
+      language_elements[i].setAttribute('id', 'language-inactive')
+    }else{
+      language_elements[i].setAttribute('id', 'language-active')
+    }
+  
+  }
+  
+  current_text_button = document.getElementById('languageToggleButton').innerText
+  
+  if(current_text_button == "Español"){
+    document.getElementById('languageToggleButton').innerText = "English"
+  }else{
+    document.getElementById('languageToggleButton').innerText = "Español"
+  }
+}
+
+```
 
 ```{r echo=F, width = 60, height = 30}
 #replace these with functions to produce the map and plot and duplicate pages for spanish
@@ -33,4 +93,8 @@ leaflet(width = "100%") %>%
                label = ~htmlEscape(lines$id))
 ```
 
-On June 15th, 2020, 15 Galapagos tortoises were returned to Española island. Use this map to track the tortoises as they explore their home island.
+<p class="alt-language-text" id="language-active">On June 15th, 2020, 15 Galapagos tortoises were returned to Española island. Use this map to track the tortoises as they explore their home island.</p>
+<p class="alt-language-text" id="language-inactive">
+El 15 de junio de 2020, 15 tortugas de Galápagos fueron devueltas a la isla Española. Use este mapa para rastrear a las tortugas mientras exploran su isla natal.</p>
+
+

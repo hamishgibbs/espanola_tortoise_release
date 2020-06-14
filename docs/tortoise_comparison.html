@@ -303,11 +303,74 @@ $(document).ready(function () {
 </div>
 
 
-<h2>
+<style type="text/css">
+#language-active{
+  display: block;
+}
+
+#language-inactive{
+  display: none;
+}
+
+.sub-header-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.sub-header-list-item {
+  float: left;
+}
+
+.sub-header-list-item:last-child { float:right; }
+
+</style>
+<div style="display: table; margin: 0 auto; width: 100%">
+<ul class="sub-header-list" style="width: 100%; margin: 0; padding: 0;">
+<li class="sub-header-list-item" list-style-type="none" style="display: inline;">
+<h2 class="alt-language-text" id="language-active">
 The tortoises
 </h2>
-<div id="htmlwidget-c77ba1b7d32667882877" style="width:672px;height:480px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-c77ba1b7d32667882877">{"x":{"visdat":{"1000a7aa1cc57":["function () ","plotlyVisDat"]},"cur_data":"1000a7aa1cc57","attrs":{"1000a7aa1cc57":{"x":{},"y":{},"orientation":"h","marker":{"color":{}},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":"Length"},"yaxis":{"domain":[0,1],"automargin":true,"title":"Tortoise id","type":"category","categoryorder":"array","categoryarray":["ESP-13-H","ESP-03-H","ESP-01-H","ESP-14-H","ESP-15-M","ESP-12-H","ESP-04-H","ESP-02-H"]},"hovermode":"closest","showlegend":false},"source":"A","config":{"showSendToCloud":false},"data":[{"x":[3.36664607512808,4.92202731620337,5.95696946484731,10.1952130801225,11.8918338517937,14.3307591898742,18.4250377382174,4181.5956665336],"y":["ESP-13-H","ESP-03-H","ESP-01-H","ESP-14-H","ESP-15-M","ESP-12-H","ESP-04-H","ESP-02-H"],"orientation":"h","marker":{"color":["#4AC16D","#365C8D","#440154","#9FDA3A","#FDE725","#1FA187","#277F8E","#46337E"],"line":{"color":"rgba(31,119,180,1)"}},"type":"bar","error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<h2 class="alt-language-text" id="language-inactive">
+Las tortugas
+</h2>
+</li>
+<li class="sub-header-list-item" list-style-type="none" style="display: inline;">
+<button id="languageToggleButton" onclick="toggleLanguage()" style="margin-top: 25px;">
+Español
+</button>
+</li>
+</ul>
+</div>
+<script type="text/javascript">
+toggleLanguage = function(){
+  
+  var language_elements = document.querySelectorAll(".alt-language-text")
+  
+  var i;
+  for (i = 0; i < language_elements.length; i++) {
+    
+    if(language_elements[i].getAttribute('id') == 'language-active'){
+      language_elements[i].setAttribute('id', 'language-inactive')
+    }else{
+      language_elements[i].setAttribute('id', 'language-active')
+    }
+  
+  }
+  
+  current_text_button = document.getElementById('languageToggleButton').innerText
+  
+  if(current_text_button == "Español"){
+    document.getElementById('languageToggleButton').innerText = "English"
+  }else{
+    document.getElementById('languageToggleButton').innerText = "Español"
+  }
+}
+
+</script>
+<div id="htmlwidget-86f47ac7c1e113d667d2" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-86f47ac7c1e113d667d2">{"x":{"visdat":{"119f527ccf3c0":["function () ","plotlyVisDat"]},"cur_data":"119f527ccf3c0","attrs":{"119f527ccf3c0":{"x":{},"y":{},"orientation":"h","marker":{"color":{}},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":"Length"},"yaxis":{"domain":[0,1],"automargin":true,"title":"Tortoise id","type":"category","categoryorder":"array","categoryarray":["ESP-13-H","ESP-03-H","ESP-01-H","ESP-14-H","ESP-15-M","ESP-12-H","ESP-04-H","ESP-02-H"]},"hovermode":"closest","showlegend":false},"source":"A","config":{"showSendToCloud":false},"data":[{"x":[3.36664607512808,4.92202731620337,5.95696946484731,10.1952130801225,11.8918338517937,14.3307591898742,18.4250377382174,4181.5956665336],"y":["ESP-13-H","ESP-03-H","ESP-01-H","ESP-14-H","ESP-15-M","ESP-12-H","ESP-04-H","ESP-02-H"],"orientation":"h","marker":{"color":["#4AC16D","#365C8D","#440154","#9FDA3A","#FDE725","#1FA187","#277F8E","#46337E"],"line":{"color":"rgba(31,119,180,1)"}},"type":"bar","error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 
 
 
