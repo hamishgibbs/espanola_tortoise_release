@@ -1,11 +1,11 @@
 name: "espanola-tortoise-release"
 output_dir: "docs"
 navbar:
-  title: "Española release 2020"
+  title: "Return of the Espanola Tortoises"
   left:
-    - text: "Overview"
+    - text: "Tortoise Locations"
       href: index.html
-    - text: "Tortoise comparison"
+    - text: "The Tortoises"
       href: tortoise_comparison.html
     - text: "About"
       href: about.html
