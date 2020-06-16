@@ -6,16 +6,16 @@ SITE_DIR := ${PROJDIR}/docs
 R = /usr/local/bin/Rscript $^ $@
 
 
-default: preprocess_data process_data build_website push_site
+default: process_data build_website push_site
 
 push_site: ${SITE_DIR}/index.html
 	git add . 
 	git commit -m "automatic site build"
 	git push
 
-build_website: ${SITE_DIR}/index.html
+build_website: ${SITE_DIR}/index.html ${DATA_DIR}/lines.rds ${DATA_DIR}/most_recent_points.rds ${DATA_DIR}/length_summary.rds
 
-process_data: ${DATA_DIR}/lines.rds ${DATA_DIR}/most_recent_points.rds ${DATA_DIR}/length_summary.rds
+process_data: preprocess_data ${DATA_DIR}/lines.rds ${DATA_DIR}/most_recent_points.rds ${DATA_DIR}/length_summary.rds
 
 preprocess_data: ${DATA_DIR}/preprocessed_data.rds
 

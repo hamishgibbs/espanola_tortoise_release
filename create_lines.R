@@ -13,8 +13,8 @@ print('Reading input data.')
 
 input_data <- read_rds(.args[1])
 
-testthat::test_that('Most recent record is today', {
-  testthat::expect_equal(input_data %>% pull(dt) %>% max() %>% as.Date(), Sys.Date())
+testthat::test_that('Most recent record is today or yesterday', {
+  testthat::expect_gte(input_data %>% pull(dt) %>% max() %>% as.Date(), Sys.Date() - 1)
 })
 
 #convert to sf
@@ -24,8 +24,7 @@ lines <- pts %>%
   group_by(id) %>% 
   arrange(dt) %>% 
   summarize(n = n(),
-            .groups = "keep") %>% 
-  ungroup() %>% 
+            .groups = "drop") %>% 
   st_cast("LINESTRING")
 
 write_rds(lines, tail(.args, 1))

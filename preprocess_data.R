@@ -20,8 +20,9 @@ input_data <- do.call(rbind, input_data) %>%
   dplyr::rename(id = `ASSET ID`,
                 dt = `LAST SEEN TIME`) %>% 
   dplyr::mutate(dt = as.POSIXlt(dt)) %>% 
-  distinct()
+  distinct() %>% 
   #filter greater than a certain date here  
+  filter(dt > as.Date('2020-06-14'))
 
 #drop any records with <2 points
 more_than_2_pts <- input_data %>% group_by(id) %>% 
