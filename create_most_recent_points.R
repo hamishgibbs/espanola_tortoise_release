@@ -25,7 +25,6 @@ most_recent_ref <- input_data %>%
 #if rows are being dropped mysteriously - alter filter(DESCRIPTION == 'blank')
 input_data <- input_data %>%
   distinct() %>% 
-  filter(DESCRIPTION == 'blank') %>% 
   left_join(most_recent_ref, by = c('id', 'dt')) %>% 
   filter(most_recent == T)
 
