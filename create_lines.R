@@ -25,6 +25,8 @@ lines <- pts %>%
   arrange(dt) %>% 
   summarize(n = n(),
             .groups = "drop") %>% 
+  mutate(geom_type = st_geometry_type(geometry)) %>% 
+  filter(geom_type == 'MULTIPOINT') %>% 
   st_cast("LINESTRING")
 
 write_rds(lines, tail(.args, 1))
