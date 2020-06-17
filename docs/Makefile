@@ -11,7 +11,7 @@ default: process_data build_website push_site
 push_site: ${SITE_DIR}/index.html
 	git add . 
 	git commit -m "automatic site build"
-	git config --global user.name "hamishgibbs"
+	git config --global Username "hamishgibbs"
 	git push
 
 build_website: ${SITE_DIR}/index.html ${DATA_DIR}/lines.rds ${DATA_DIR}/most_recent_points.rds ${DATA_DIR}/length_summary.rds
