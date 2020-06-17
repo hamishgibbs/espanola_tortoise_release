@@ -22,7 +22,7 @@ input_data <- do.call(rbind, input_data) %>%
   dplyr::mutate(dt = as.POSIXlt(dt)) %>% 
   distinct() %>% 
   #filter greater than a certain date here  
-  filter(dt >= as.POSIXct('2020-06-15 13:00:00'))
+  filter(dt >= as.POSIXct('2020-06-15 14:00:00'))
 #drop any records with <2 points
 more_than_2_pts <- input_data %>% group_by(id) %>% 
   summarise(n = n(), .groups='drop') %>% 
