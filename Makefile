@@ -17,9 +17,12 @@ build_website: ${SITE_DIR}/index.html ${DATA_DIR}/lines.rds ${DATA_DIR}/most_rec
 
 process_data: preprocess_data ${DATA_DIR}/lines.rds ${DATA_DIR}/most_recent_points.rds ${DATA_DIR}/length_summary.rds
 
-preprocess_data: ${DATA_DIR}/preprocessed_data.rds
+preprocess_data: pull_data ${DATA_DIR}/preprocessed_data.rds
 
-${DATA_DIR}/preprocessed_data.rds: ${PROJDIR}/preprocess_data.R ${RAW_DIR}
+pull_data: 
+	git pull
+
+${DATA_DIR}/preprocessed_data.rds: ${PROJDIR}/preprocess_data.R ${RAW_DIR} pull_data
 	${R}
 
 ${DATA_DIR}/lines.rds: ${PROJDIR}/create_lines.R ${DATA_DIR}/preprocessed_data.rds

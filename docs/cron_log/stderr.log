@@ -1,0 +1,19 @@
+From https://github.com/hamishgibbs/espanola_tortoise_release
+   bc332d6..acb3ccc  master     -> origin/master
+
+Rendering: ./about.Rmd
+[WARNING] Could not parse YAML metadata at line 4 column 1: not an object
+[WARNING] This document format requires a nonempty <title> element.
+  Please specify either 'title' or 'pagetitle' in the metadata.
+  Falling back to 'about.utf8'
+
+Rendering: ./index.Rmd
+[WARNING] This document format requires a nonempty <title> element.
+  Please specify either 'title' or 'pagetitle' in the metadata.
+  Falling back to 'index.utf8'
+
+Rendering: ./tortoise_comparison.Rmd
+[WARNING] Could not parse YAML metadata at line 4 column 1: not an object
+[WARNING] This document format requires a nonempty <title> element.
+  Please specify either 'title' or 'pagetitle' in the metadata.
+  Falling back to 'tortoise_comparison.utf8'

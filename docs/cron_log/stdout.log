@@ -1,0 +1,120 @@
+git pull
+Updating bc332d6..acb3ccc
+Fast-forward
+ data/assets_2020-06-17_071211.csv | 31 +++++++++++++++++++++++++++++++
+ 1 file changed, 31 insertions(+)
+ create mode 100644 data/assets_2020-06-17_071211.csv
+/usr/local/bin/Rscript /Users/hamishgibbs/Documents/Personal/espanola_tortoise_release/preprocess_data.R /Users/hamishgibbs/Documents/Personal/espanola_tortoise_release/data pull_data /Users/hamishgibbs/Documents/Personal/espanola_tortoise_release/processed_data/preprocessed_data.rds
+[1] "Reading input data."
+[1] "Successfully written preprocessed_data.rds."
+/usr/local/bin/Rscript /Users/hamishgibbs/Documents/Personal/espanola_tortoise_release/create_lines.R /Users/hamishgibbs/Documents/Personal/espanola_tortoise_release/processed_data/preprocessed_data.rds /Users/hamishgibbs/Documents/Personal/espanola_tortoise_release/processed_data/lines.rds
+[1] "Reading input data."
+[1] "Successfully written lines.rds."
+/usr/local/bin/Rscript /Users/hamishgibbs/Documents/Personal/espanola_tortoise_release/create_most_recent_points.R /Users/hamishgibbs/Documents/Personal/espanola_tortoise_release/processed_data/preprocessed_data.rds /Users/hamishgibbs/Documents/Personal/espanola_tortoise_release/processed_data/most_recent_points.rds
+[1] "Reading input data."
+[1] "Successfully written most_recent_points.rds."
+/usr/local/bin/Rscript /Users/hamishgibbs/Documents/Personal/espanola_tortoise_release/create_length_summary.R /Users/hamishgibbs/Documents/Personal/espanola_tortoise_release/processed_data/lines.rds /Users/hamishgibbs/Documents/Personal/espanola_tortoise_release/processed_data/length_summary.rds
+[1] "Reading input data."
+[1] "Successfully written length_summary.rds."
+/usr/local/bin/Rscript /Users/hamishgibbs/Documents/Personal/espanola_tortoise_release/build_website.R /Users/hamishgibbs/Documents/Personal/espanola_tortoise_release/processed_data/lines.rds /Users/hamishgibbs/Documents/Personal/espanola_tortoise_release/processed_data/length_summary.rds /Users/hamishgibbs/Documents/Personal/espanola_tortoise_release/processed_data/most_recent_points.rds /Users/hamishgibbs/Documents/Personal/espanola_tortoise_release/index.Rmd /Users/hamishgibbs/Documents/Personal/espanola_tortoise_release/tortoise_comparison.Rmd /Users/hamishgibbs/Documents/Personal/espanola_tortoise_release/about.Rmd /Users/hamishgibbs/Documents/Personal/espanola_tortoise_release/docs/index.html
+  |                                                                              |                                                                      |   0%  |                                                                              |..............                                                        |  20%
+  ordinary text without R code
+
+  |                                                                              |............................                                          |  40%
+label: unnamed-chunk-1 (with options) 
+List of 2
+ $ echo  : logi FALSE
+ $ engine: chr "css"
+
+  |                                                                              |..........................................                            |  60%
+   inline R code fragments
+
+  |                                                                              |........................................................              |  80%
+label: unnamed-chunk-2 (with options) 
+List of 2
+ $ echo  : logi FALSE
+ $ engine: chr "js"
+
+  |                                                                              |......................................................................| 100%
+  ordinary text without R code
+
+
+/Applications/RStudio.app/Contents/MacOS/pandoc/pandoc +RTS -K512m -RTS about.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash+smart --output about.html --email-obfuscation none --standalone --section-divs --template /Library/Frameworks/R.framework/Versions/3.6/Resources/library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --include-before-body /tmp/Rtmp1ZF2tj/rmarkdown-str35612846fba9.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:bootstrap' --include-in-header /tmp/Rtmp1ZF2tj/rmarkdown-str35614c3428e7.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --lua-filter /Library/Frameworks/R.framework/Versions/3.6/Resources/library/rmarkdown/rmd/lua/pagebreak.lua --lua-filter /Library/Frameworks/R.framework/Versions/3.6/Resources/library/rmarkdown/rmd/lua/latex-div.lua 
+  |                                                                              |                                                                      |   0%  |                                                                              |........                                                              |  11%
+  ordinary text without R code
+
+  |                                                                              |................                                                      |  22%
+label: unnamed-chunk-1 (with options) 
+List of 1
+ $ echo: symbol F
+
+  |                                                                              |.......................                                               |  33%
+  ordinary text without R code
+
+  |                                                                              |...............................                                       |  44%
+label: unnamed-chunk-2 (with options) 
+List of 2
+ $ echo  : logi FALSE
+ $ engine: chr "css"
+
+  |                                                                              |.......................................                               |  56%
+  ordinary text without R code
+
+  |                                                                              |...............................................                       |  67%
+label: unnamed-chunk-3 (with options) 
+List of 2
+ $ echo  : logi FALSE
+ $ engine: chr "js"
+
+  |                                                                              |......................................................                |  78%
+  ordinary text without R code
+
+  |                                                                              |..............................................................        |  89%
+label: unnamed-chunk-4 (with options) 
+List of 3
+ $ echo  : symbol F
+ $ width : num 60
+ $ height: num 30
+
+  |                                                                              |......................................................................| 100%
+  ordinary text without R code
+
+
+/Applications/RStudio.app/Contents/MacOS/pandoc/pandoc +RTS -K512m -RTS index.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash+smart --output index.html --email-obfuscation none --standalone --section-divs --template /Library/Frameworks/R.framework/Versions/3.6/Resources/library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --include-before-body /tmp/Rtmp1ZF2tj/rmarkdown-str356156bff56e.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:bootstrap' --include-in-header /tmp/Rtmp1ZF2tj/rmarkdown-str3561548a3540.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --lua-filter /Library/Frameworks/R.framework/Versions/3.6/Resources/library/rmarkdown/rmd/lua/pagebreak.lua --lua-filter /Library/Frameworks/R.framework/Versions/3.6/Resources/library/rmarkdown/rmd/lua/latex-div.lua --include-in-header GA_Script.html 
+  |                                                                              |                                                                      |   0%  |                                                                              |.........                                                             |  12%
+  ordinary text without R code
+
+  |                                                                              |..................                                                    |  25%
+label: unnamed-chunk-1 (with options) 
+List of 2
+ $ echo  : logi FALSE
+ $ engine: chr "css"
+
+  |                                                                              |..........................                                            |  38%
+  ordinary text without R code
+
+  |                                                                              |...................................                                   |  50%
+label: unnamed-chunk-2 (with options) 
+List of 2
+ $ echo  : logi FALSE
+ $ engine: chr "js"
+
+  |                                                                              |............................................                          |  62%
+  ordinary text without R code
+
+  |                                                                              |....................................................                  |  75%
+label: unnamed-chunk-3 (with options) 
+List of 1
+ $ echo: symbol F
+
+  |                                                                              |.............................................................         |  88%
+  ordinary text without R code
+
+  |                                                                              |......................................................................| 100%
+label: unnamed-chunk-4 (with options) 
+List of 2
+ $ echo   : symbol F
+ $ warning: logi FALSE
+
+
+/Applications/RStudio.app/Contents/MacOS/pandoc/pandoc +RTS -K512m -RTS tortoise_comparison.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash+smart --output tortoise_comparison.html --email-obfuscation none --standalone --section-divs --template /Library/Frameworks/R.framework/Versions/3.6/Resources/library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --include-before-body /tmp/Rtmp1ZF2tj/rmarkdown-str3561188a0ce6.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:bootstrap' --include-in-header /tmp/Rtmp1ZF2tj/rmarkdown-str3561f54dca0.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --lua-filter /Library/Frameworks/R.framework/Versions/3.6/Resources/library/rmarkdown/rmd/lua/pagebreak.lua --lua-filter /Library/Frameworks/R.framework/Versions/3.6/Resources/library/rmarkdown/rmd/lua/latex-div.lua 
