@@ -2,7 +2,7 @@
 **/.DS_Store
 _site/**/*.csv
 _site/**/*.rds
-
+cron_log/*
 .Rhistory
 .Rapp.history
 
