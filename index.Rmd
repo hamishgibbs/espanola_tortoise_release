@@ -110,4 +110,4 @@ leaflet(width = "100%") %>%
 <p class="alt-language-text" id="language-inactive">
 El 15 de junio de 2020, 15 tortugas de Galápagos fueron devueltas a la isla Española. Use este mapa para rastrear a las tortugas mientras exploran su isla natal.</p>
 
-
+Updated `r format(Sys.Date(), "%A %B %d, %Y")`.
