@@ -1,9 +1,5 @@
 git pull
-Updating 9860c50..734de51
-Fast-forward
- data/assets_2020-06-17_204042.csv | 31 +++++++++++++++++++++++++++++++
- 1 file changed, 31 insertions(+)
- create mode 100644 data/assets_2020-06-17_204042.csv
+Already up to date.
 /usr/local/bin/Rscript /Users/hamishgibbs/Documents/Personal/espanola_tortoise_release/preprocess_data.R /Users/hamishgibbs/Documents/Personal/espanola_tortoise_release/data pull_data /Users/hamishgibbs/Documents/Personal/espanola_tortoise_release/processed_data/preprocessed_data.rds
 [1] "Reading input data."
 [1] "Successfully written preprocessed_data.rds."
@@ -39,7 +35,7 @@ List of 2
   ordinary text without R code
 
 
-/Applications/RStudio.app/Contents/MacOS/pandoc/pandoc +RTS -K512m -RTS about.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash+smart --output about.html --email-obfuscation none --standalone --section-divs --template /Library/Frameworks/R.framework/Versions/3.6/Resources/library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --include-before-body /tmp/RtmpF2y4Nm/rmarkdown-str982c73f6b768.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:bootstrap' --include-in-header /tmp/RtmpF2y4Nm/rmarkdown-str982c4a834852.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --lua-filter /Library/Frameworks/R.framework/Versions/3.6/Resources/library/rmarkdown/rmd/lua/pagebreak.lua --lua-filter /Library/Frameworks/R.framework/Versions/3.6/Resources/library/rmarkdown/rmd/lua/latex-div.lua 
+/Applications/RStudio.app/Contents/MacOS/pandoc/pandoc +RTS -K512m -RTS about.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash+smart --output about.html --email-obfuscation none --standalone --section-divs --template /Library/Frameworks/R.framework/Versions/3.6/Resources/library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --include-before-body /tmp/Rtmpc2REPk/rmarkdown-str1215d678f3e7.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:bootstrap' --include-in-header /tmp/Rtmpc2REPk/rmarkdown-str1215d6ed4c602.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --lua-filter /Library/Frameworks/R.framework/Versions/3.6/Resources/library/rmarkdown/rmd/lua/pagebreak.lua --lua-filter /Library/Frameworks/R.framework/Versions/3.6/Resources/library/rmarkdown/rmd/lua/latex-div.lua 
   |                                                                              |                                                                      |   0%  |                                                                              |........                                                              |  11%
   ordinary text without R code
 
@@ -77,10 +73,10 @@ List of 3
  $ height: num 30
 
   |                                                                              |......................................................................| 100%
-  ordinary text without R code
+   inline R code fragments
 
 
-/Applications/RStudio.app/Contents/MacOS/pandoc/pandoc +RTS -K512m -RTS index.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash+smart --output index.html --email-obfuscation none --standalone --section-divs --template /Library/Frameworks/R.framework/Versions/3.6/Resources/library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --include-before-body /tmp/RtmpF2y4Nm/rmarkdown-str982c391496f2.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:bootstrap' --include-in-header /tmp/RtmpF2y4Nm/rmarkdown-str982c76c20724.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --lua-filter /Library/Frameworks/R.framework/Versions/3.6/Resources/library/rmarkdown/rmd/lua/pagebreak.lua --lua-filter /Library/Frameworks/R.framework/Versions/3.6/Resources/library/rmarkdown/rmd/lua/latex-div.lua --include-in-header GA_Script.html 
+/Applications/RStudio.app/Contents/MacOS/pandoc/pandoc +RTS -K512m -RTS index.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash+smart --output index.html --email-obfuscation none --standalone --section-divs --template /Library/Frameworks/R.framework/Versions/3.6/Resources/library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --include-before-body /tmp/Rtmpc2REPk/rmarkdown-str1215d4e6fc175.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:bootstrap' --include-in-header /tmp/Rtmpc2REPk/rmarkdown-str1215db06108e.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --lua-filter /Library/Frameworks/R.framework/Versions/3.6/Resources/library/rmarkdown/rmd/lua/pagebreak.lua --lua-filter /Library/Frameworks/R.framework/Versions/3.6/Resources/library/rmarkdown/rmd/lua/latex-div.lua --include-in-header GA_Script.html 
   |                                                                              |                                                                      |   0%  |                                                                              |.........                                                             |  12%
   ordinary text without R code
 
@@ -117,10 +113,4 @@ List of 2
  $ warning: logi FALSE
 
 
-/Applications/RStudio.app/Contents/MacOS/pandoc/pandoc +RTS -K512m -RTS tortoise_comparison.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash+smart --output tortoise_comparison.html --email-obfuscation none --standalone --section-divs --template /Library/Frameworks/R.framework/Versions/3.6/Resources/library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --include-before-body /tmp/RtmpF2y4Nm/rmarkdown-str982c2ecb909c.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:bootstrap' --include-in-header /tmp/RtmpF2y4Nm/rmarkdown-str982c368309c4.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --lua-filter /Library/Frameworks/R.framework/Versions/3.6/Resources/library/rmarkdown/rmd/lua/pagebreak.lua --lua-filter /Library/Frameworks/R.framework/Versions/3.6/Resources/library/rmarkdown/rmd/lua/latex-div.lua 
-git -C docs/ add . 
-git -C docs/ commit -m "automatic site build"
-[master 3d6938f] automatic site build
- 10 files changed, 46 insertions(+), 9 deletions(-)
- create mode 100644 docs/data/assets_2020-06-17_204042.csv
-git -C docs/ push
+/Applications/RStudio.app/Contents/MacOS/pandoc/pandoc +RTS -K512m -RTS tortoise_comparison.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash+smart --output tortoise_comparison.html --email-obfuscation none --standalone --section-divs --template /Library/Frameworks/R.framework/Versions/3.6/Resources/library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --include-before-body /tmp/Rtmpc2REPk/rmarkdown-str1215d57f76b07.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:bootstrap' --include-in-header /tmp/Rtmpc2REPk/rmarkdown-str1215d3493c5af.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --lua-filter /Library/Frameworks/R.framework/Versions/3.6/Resources/library/rmarkdown/rmd/lua/pagebreak.lua --lua-filter /Library/Frameworks/R.framework/Versions/3.6/Resources/library/rmarkdown/rmd/lua/latex-div.lua 
