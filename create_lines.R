@@ -20,14 +20,34 @@ testthat::test_that('Most recent record is today or yesterday', {
 #convert to sf
 pts <- st_as_sf(input_data, coords = c("LAST LONGITUDE", "LAST LATITUDE"), crs = 4326)
 
-lines <- pts %>% 
+e8 <- input_data %>% 
   group_by(id) %>% 
-  arrange(dt) %>% 
-  summarize(n = n(),
-            .groups = "drop") %>% 
-  mutate(geom_type = st_geometry_type(geometry)) %>% 
-  filter(geom_type == 'MULTIPOINT') %>% 
-  st_cast("LINESTRING")
+  arrange(dt_unix) %>% 
+  group_split()
+
+create_time_line <- function(df){
+  
+  id <- df %>% pull('id') %>% unique()
+  
+  if (length(id) > 1){stop("id length > 1")}
+  
+  point_matrix <- matrix(nrow = length(df %>% pull(1)), ncol = 2)
+  for (i in 1:length(df %>% pull(1))){
+    point_matrix[i,1] <- df %>% slice(i) %>% pull(`LAST LONGITUDE`)
+    point_matrix[i,2] <- df %>% slice(i) %>% pull(`LAST LATITUDE`)
+  }
+  
+  ldf <- data.frame(id = id, geometry = st_sfc(st_linestring(point_matrix)))
+  
+  return(ldf)
+  
+}
+
+lines <- lapply(e8, create_time_line)
+
+lines <- do.call(rbind, lines)
+
+lines <- st_as_sf(lines, crs = 4326)
 
 write_rds(lines, tail(.args, 1))
 

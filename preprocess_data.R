@@ -19,7 +19,8 @@ input_data <- do.call(rbind, input_data) %>%
   tidyr::drop_na("LAST LONGITUDE") %>% 
   dplyr::rename(id = `ASSET ID`,
                 dt = `LAST SEEN TIME`) %>% 
-  dplyr::mutate(dt = as.POSIXlt(dt)) %>% 
+  dplyr::mutate(dt = as.POSIXlt(dt),
+                dt_unix = as.numeric(dt)) %>% 
   distinct() %>% 
   #filter greater than a certain date here  
   filter(dt >= as.POSIXct('2020-06-15 14:00:00'))
