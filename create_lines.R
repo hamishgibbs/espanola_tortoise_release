@@ -20,7 +20,7 @@ testthat::test_that('Most recent record is today or yesterday', {
 #convert to sf
 pts <- st_as_sf(input_data, coords = c("LAST LONGITUDE", "LAST LATITUDE"), crs = 4326)
 
-e8 <- input_data %>% 
+id_groups <- input_data %>% 
   group_by(id) %>% 
   arrange(dt_unix) %>% 
   group_split()
@@ -43,7 +43,7 @@ create_time_line <- function(df){
   
 }
 
-lines <- lapply(e8, create_time_line)
+lines <- lapply(id_groups, create_time_line)
 
 lines <- do.call(rbind, lines)
 
