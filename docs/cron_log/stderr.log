@@ -15,3 +15,13 @@ Rendering: ./tortoise_comparison.Rmd
 [WARNING] This document format requires a nonempty <title> element.
   Please specify either 'title' or 'pagetitle' in the metadata.
   Falling back to 'tortoise_comparison.utf8'
+
+Output created: docs/index.html
+Warning message:
+`arrange_()` is deprecated as of dplyr 0.7.0.
+Please use `arrange()` instead.
+See vignette('programming') for more help
+This warning is displayed once every 8 hours.
+Call `lifecycle::last_warnings()` to see where this warning was generated. 
+To github.com:hamishgibbs/espanola_tortoise_release.git
+   3b00ea5..b508966  master -> master
