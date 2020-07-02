@@ -4,7 +4,7 @@ import { Icon, GeoJSON } from "leaflet";
 import getColour from './utils'
 
 import color_ref from '../json/color_ref.json'
-import * as line_data from '../json/lines.json'
+import line_data from '../json/lines.json'
 import recent_points from '../json/most_recent_points.json'
 
 import Header from './Header'
@@ -18,25 +18,22 @@ export default class MapContainer extends React.Component<{}, {}> {
     var lng: Array<number> = feature.geometry.coordinates.map(function(item: any){return(item[0])})
     var lat: Array<number> = feature.geometry.coordinates.map(function(item: any){return(item[1])})
 
-    if(lng.length != lat.length){
-      return(null)
-    }else{
-
-      var coords: any = []
-      var i;
-      for (i = 0; i < lng.length; i++) {
-        coords[i] = [lat[i], lng[i]]
-      }
+    var coords: any = []
+    var i;
+    for (i = 0; i < lng.length; i++) {
+      coords[i] = [lat[i], lng[i]]
     }
 
     feature.geometry.coordinates = coords
 
-    return(feature.default)
+    return(feature)
 
   }
 
 
   render() {
+
+    console.log(line_data)
 
     //adjust coordinates of line data
     line_data.features.map(this.adjustGeoJSON)

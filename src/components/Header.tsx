@@ -32,7 +32,7 @@ export default class Header extends React.Component<HeaderProps> {
 								<nav>
 									<ul className={ styles.pageheader }>
 									<li>
-										<Link to="/">Las Tortugas</Link>
+										<Link to="/espanola_tortoise_release">Las Tortugas</Link>
 									</li>
                   <li>
 										<Link to="/data">Data</Link>
@@ -48,8 +48,8 @@ export default class Header extends React.Component<HeaderProps> {
 								</nav>
                 </div>
 								<Switch>
-									<Route exact path="/">
-										<Home domainlang = { this.props.domainlang }/>
+									<Route exact path="/espanola_tortoise_release">
+										<Home/>
 									</Route>
                   <Route path="/data">
 										<Data domainlang = { this.props.domainlang }/>
@@ -73,7 +73,7 @@ export default class Header extends React.Component<HeaderProps> {
 								<nav>
 									<ul className={styles.pageheader}>
 									<li>
-										<Link to="/">The Tortoises</Link>
+										<Link to="/espanola_tortoise_release">The Tortoises</Link>
 									</li>
                   <li>
 										<Link to="/data">Data</Link>
@@ -88,8 +88,8 @@ export default class Header extends React.Component<HeaderProps> {
 									</ul>
 								</nav>
 								<Switch>
-									<Route exact path="/">
-										<Home domainlang = { this.props.domainlang }/>
+									<Route exact path="/espanola_tortoise_release">
+										<Home/>
 									</Route>
                   <Route path="/data">
                     <Data domainlang = { this.props.domainlang }/>

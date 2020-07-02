@@ -73,8 +73,6 @@ export default class Timeline extends React.Component<TPProps, {}> {
     //@ts-ignore
     constructLine(svg, containerdims, plot_extent, eventdata, animation_duration)
 
-    //@ts-ignore
-    constructPoints(svg, containerdims, relative_distance)
 
     //@ts-ignore
     placeTextTitle(svg, plot_extent, eventdata)
@@ -88,6 +86,9 @@ export default class Timeline extends React.Component<TPProps, {}> {
       setTimeout(() => {
         //@ts-ignore
         var linedata = getTraceLineData(relative_distance[i], i, plot_extent)
+
+        //@ts-ignore
+        constructPoints(svg, containerdims, relative_distance[i])
 
         //@ts-ignore
         constructTraceLine(svg, containerdims, relative_distance, linedata)
@@ -153,22 +154,18 @@ export default class Timeline extends React.Component<TPProps, {}> {
 
   }
 
-  constructPoints(svg: any, containerdims: any, relative_distance: any){
-    var circles: any = d3.select(svg).append('g').selectAll("circle")
-                          .data(relative_distance)
-                          .enter()
-                          .append("circle");
-
-    //time creation to line up with line animation
-    circles
-       .attr("cx", function(d: number){return(d);})
+  constructPoints(svg: any, containerdims: any, relative_point: number){
+    d3.select(svg)
+      .append('g')
+      .append("circle")
+       .attr("cx", relative_point)
        .attr("cy", 150)
        .attr("r", 0)
        .style("fill", "white")
        .attr("stroke", "black")
        .attr("stroke-width", 1)
       .transition()
-      .duration(750)
+      .duration(400)
       .attr('r', 5);
   }
 

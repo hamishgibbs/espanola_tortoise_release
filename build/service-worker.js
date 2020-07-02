@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/espanola_tortoise_release/precache-manifest.48c15387f4a0d6baad2a568f9d9ea55e.js"
+  "/espanola_tortoise_release/precache-manifest.9a2b01c400d2f44bbf9b342fb30f275d.js"
 );
 
 self.addEventListener('message', (event) => {
