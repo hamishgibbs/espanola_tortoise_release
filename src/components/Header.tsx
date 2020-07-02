@@ -35,13 +35,13 @@ export default class Header extends React.Component<HeaderProps> {
 										<Link to="/espanola_tortoise_release">Las Tortugas</Link>
 									</li>
                   <li>
-										<Link to="/data">Data</Link>
+										<Link to="/espanola_tortoise_release/data">Data</Link>
 									</li>
                   <li>
-										<Link to="/timeline">Cronograma</Link>
+										<Link to="/espanola_tortoise_release/timeline">Cronograma</Link>
 									</li>
 									<li>
-										<Link to="/about">Información</Link>
+										<Link to="/espanola_tortoise_release/about">Información</Link>
 									</li>
 									<li><ToggleLanguage togglelanguage = { this.props.togglelanguage }/></li>
 									</ul>
@@ -51,13 +51,13 @@ export default class Header extends React.Component<HeaderProps> {
 									<Route exact path="/espanola_tortoise_release">
 										<Home/>
 									</Route>
-                  <Route path="/data">
+                  <Route path="/espanola_tortoise_release/data">
 										<Data domainlang = { this.props.domainlang }/>
 									</Route>
-                  <Route path="/timeline">
+                  <Route path="/espanola_tortoise_release/timeline">
 										<Timeline domainlang = { this.props.domainlang }/>
 									</Route>
-									<Route path="/about">
+									<Route path="/espanola_tortoise_release/about">
 										<About domainlang = { this.props.domainlang }/>
 									</Route>
 								</Switch>
@@ -76,13 +76,13 @@ export default class Header extends React.Component<HeaderProps> {
 										<Link to="/espanola_tortoise_release">The Tortoises</Link>
 									</li>
                   <li>
-										<Link to="/data">Data</Link>
+										<Link to="/espanola_tortoise_release/data">Data</Link>
 									</li>
                   <li>
-										<Link to="/timeline">Timeline</Link>
+										<Link to="/espanola_tortoise_release/timeline">Timeline</Link>
 									</li>
 									<li>
-										<Link to="/about">About</Link>
+										<Link to="/espanola_tortoise_release/about">About</Link>
 									</li>
 									<li><ToggleLanguage togglelanguage = { this.props.togglelanguage }/></li>
 									</ul>
@@ -91,13 +91,13 @@ export default class Header extends React.Component<HeaderProps> {
 									<Route exact path="/espanola_tortoise_release">
 										<Home/>
 									</Route>
-                  <Route path="/data">
+                  <Route path="/espanola_tortoise_release/data">
                     <Data domainlang = { this.props.domainlang }/>
 									</Route>
-                  <Route path="/timeline">
+                  <Route path="/espanola_tortoise_release/timeline">
 										<Timeline domainlang = { this.props.domainlang }/>
 									</Route>
-									<Route path="/about">
+									<Route path="/espanola_tortoise_release/about">
 										<About domainlang = { this.props.domainlang }/>
 									</Route>
 								</Switch>
