@@ -1,0 +1,23 @@
+.iconrow_container {
+  display: table;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  padding-top: 25px;
+}
+
+.iconrow_container ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.iconrow_container li {
+  list-style-type: none;
+  display: inline;
+}
+
+.iconrow_container img {
+  max-width: 100;
+  max-height: 100px; 
+  padding-left: 70px
+}

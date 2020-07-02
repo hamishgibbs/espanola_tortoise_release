@@ -1,0 +1,7 @@
+.barchartcontainer {
+  display: block;
+  margin: auto;
+  padding-top: 50px;
+  width: 90%;
+  height: 500px;
+}

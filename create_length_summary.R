@@ -4,7 +4,7 @@ suppressPackageStartupMessages({
 })
 
 if(interactive()){
-  .args <- c('processed_data/lines.rds', 'processed_data/length_summary.rds')
+  .args <- c('processed_data/lines.rds', 'processed_data/length_summary.json')
 }else{
   .args <- commandArgs(trailingOnly = T)
 }
@@ -18,6 +18,7 @@ line_sum <- lines %>%
   mutate(length = as.numeric(st_length(geometry)) / 1000) %>% 
   st_set_geometry(NULL)
 
-write_rds(line_sum, tail(.args, 1))
+write(jsonlite::toJSON(line_sum), tail(.args, 1))
 
-print('Successfully written length_summary.rds.')
+
+print('Successfully written length_summary.json.')

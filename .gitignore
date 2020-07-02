@@ -3,6 +3,7 @@
 _site/**/*.csv
 _site/**/*.rds
 cron_log/*
+node_modules
 .Rhistory
 .Rapp.history
 

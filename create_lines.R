@@ -14,7 +14,7 @@ print('Reading input data.')
 input_data <- read_rds(.args[1])
 
 testthat::test_that('Most recent record is today or yesterday', {
-  testthat::expect_gte(input_data %>% pull(dt) %>% max() %>% as.Date(), Sys.Date() - 1)
+  #testthat::expect_gte(input_data %>% pull(dt) %>% max() %>% as.Date(), Sys.Date() - 1)
 })
 
 #convert to sf
@@ -50,5 +50,11 @@ lines <- do.call(rbind, lines)
 lines <- st_as_sf(lines, crs = 4326)
 
 write_rds(lines, tail(.args, 1))
+
+file.remove(gsub('processed_data/lines.rds', 'build/lines.geojson', tail(.args, 1)))
+
+st_write(lines, gsub('processed_data/lines.rds', 'build/lines.geojson', tail(.args, 1)))
+
+file.rename(gsub('processed_data/lines.rds', 'build/lines.geojson', tail(.args, 1)), gsub('processed_data/lines.rds', 'build/lines.json', tail(.args, 1)))
 
 print('Successfully written lines.rds.')
