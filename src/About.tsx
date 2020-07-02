@@ -43,9 +43,9 @@ export default class About extends React.Component<AboutProps, AboutState> {
 
   getMdDocuments = function (this: any) {
 
-    fetch('./espanola_tortoise_release/about_text_sp.md').then(res => res.text()).then(text => this.setState({ markdown_sp: text }));
+    fetch('./about_text_sp.md').then(res => res.text()).then(text => this.setState({ markdown_sp: text }));
 
-    fetch('./espanola_tortoise_release/about_text_en.md').then(res => res.text()).then(text => this.setState({ markdown_en: text }));
+    fetch('./about_text_en.md').then(res => res.text()).then(text => this.setState({ markdown_en: text }));
 
   }
 

@@ -42,16 +42,25 @@ export default class Timeline extends React.Component<TimelineProps, TimelineSta
 
   render () {
 
-    console.log(this.state)
-
-    return(
-      <div className= { styles.timelinecontainer }>
-        <div className={ styles.menucontainer }>
-          <Dropdown options = { this.defineMenuItems() } onChange={ this.handler } placeholder="Selection"/>
+    if ( this.props.domainlang === 'SP'){
+      return(
+        <div className= { styles.timelinecontainer }>
+          <div className={ styles.menucontainer }>
+            <Dropdown options = { this.defineMenuItems() } onChange={ this.handler } placeholder="Selección"/>
+          </div>
+          <TimelinePanel focus={ this.state.focus } domainlang={ this.props.domainlang }/>
         </div>
-        <TimelinePanel focus={ this.state.focus } domainlang={ this.props.domainlang }/>
-      </div>
-    )
+      )
+    }else{
+      return(
+        <div className= { styles.timelinecontainer }>
+          <div className={ styles.menucontainer }>
+            <Dropdown options = { this.defineMenuItems() } onChange={ this.handler } placeholder="Selection"/>
+          </div>
+          <TimelinePanel focus={ this.state.focus } domainlang={ this.props.domainlang }/>
+        </div>
+      )
+    }
 
   }
 }

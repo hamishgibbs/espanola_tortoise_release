@@ -15,29 +15,29 @@ export default class MapContainer extends React.Component<{}, {}> {
 
   adjustGeoJSON = function(feature: any): any{
 
-    var lng: Array<number> = feature.geometry.coordinates.map(function(item: any){return(item[0])})
-    var lat: Array<number> = feature.geometry.coordinates.map(function(item: any){return(item[1])})
+      var lng: Array<number> = feature.geometry.coordinates.map(function(item: any){return(Math.min.apply(null, item))})
+      var lat: Array<number> = feature.geometry.coordinates.map(function(item: any){return(Math.max.apply(null, item))})
 
-    var coords: any = []
-    var i;
-    for (i = 0; i < lng.length; i++) {
-      coords[i] = [lat[i], lng[i]]
-    }
+      var coords: any = []
+      var i;
+      for (i = 0; i < lng.length; i++) {
+        coords[i] = [lat[i], lng[i]]
+      }
 
-    feature.geometry.coordinates = coords
+      feature.geometry.coordinates = coords
 
-    return(feature)
+      return(feature)
+  //}else{
+  //  return(feature)
+  //}
 
   }
 
 
   render() {
 
-    console.log(line_data)
-
     //adjust coordinates of line data
     line_data.features.map(this.adjustGeoJSON)
-    console.log(recent_points[0].lat)
 
     return(
       <Map center={[-1.371844, -89.685379]} zoom={14} zoomControl={ false }>
