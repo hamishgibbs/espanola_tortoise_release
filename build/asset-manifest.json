@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.3a0656b1.chunk.css",
-    "main.js": "/static/js/main.bb689076.chunk.js",
-    "main.js.map": "/static/js/main.bb689076.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.ed75a83b.js",
-    "runtime-main.js.map": "/static/js/runtime-main.ed75a83b.js.map",
-    "static/css/2.ee241de9.chunk.css": "/static/css/2.ee241de9.chunk.css",
-    "static/js/2.2a85aad1.chunk.js": "/static/js/2.2a85aad1.chunk.js",
-    "static/js/2.2a85aad1.chunk.js.map": "/static/js/2.2a85aad1.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.c2c3b65d1e96f8de7cd3ab2d4c14955e.js": "/precache-manifest.c2c3b65d1e96f8de7cd3ab2d4c14955e.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.ee241de9.chunk.css.map": "/static/css/2.ee241de9.chunk.css.map",
-    "static/css/main.3a0656b1.chunk.css.map": "/static/css/main.3a0656b1.chunk.css.map",
-    "static/js/2.2a85aad1.chunk.js.LICENSE.txt": "/static/js/2.2a85aad1.chunk.js.LICENSE.txt"
+    "main.css": "/espanola_tortoise_release/static/css/main.3a0656b1.chunk.css",
+    "main.js": "/espanola_tortoise_release/static/js/main.8d1ef165.chunk.js",
+    "main.js.map": "/espanola_tortoise_release/static/js/main.8d1ef165.chunk.js.map",
+    "runtime-main.js": "/espanola_tortoise_release/static/js/runtime-main.199133ba.js",
+    "runtime-main.js.map": "/espanola_tortoise_release/static/js/runtime-main.199133ba.js.map",
+    "static/css/2.ee241de9.chunk.css": "/espanola_tortoise_release/static/css/2.ee241de9.chunk.css",
+    "static/js/2.2a85aad1.chunk.js": "/espanola_tortoise_release/static/js/2.2a85aad1.chunk.js",
+    "static/js/2.2a85aad1.chunk.js.map": "/espanola_tortoise_release/static/js/2.2a85aad1.chunk.js.map",
+    "index.html": "/espanola_tortoise_release/index.html",
+    "precache-manifest.48c15387f4a0d6baad2a568f9d9ea55e.js": "/espanola_tortoise_release/precache-manifest.48c15387f4a0d6baad2a568f9d9ea55e.js",
+    "service-worker.js": "/espanola_tortoise_release/service-worker.js",
+    "static/css/2.ee241de9.chunk.css.map": "/espanola_tortoise_release/static/css/2.ee241de9.chunk.css.map",
+    "static/css/main.3a0656b1.chunk.css.map": "/espanola_tortoise_release/static/css/main.3a0656b1.chunk.css.map",
+    "static/js/2.2a85aad1.chunk.js.LICENSE.txt": "/espanola_tortoise_release/static/js/2.2a85aad1.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.ed75a83b.js",
+    "static/js/runtime-main.199133ba.js",
     "static/css/2.ee241de9.chunk.css",
     "static/js/2.2a85aad1.chunk.js",
     "static/css/main.3a0656b1.chunk.css",
-    "static/js/main.bb689076.chunk.js"
+    "static/js/main.8d1ef165.chunk.js"
   ]
 }
