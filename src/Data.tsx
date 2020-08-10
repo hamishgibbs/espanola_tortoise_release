@@ -1,7 +1,5 @@
 import * as React from "react";
 
-import updatetime from './json/update_time.json'
-
 import BarChart from './components/BarChart'
 
 interface DataProps {
@@ -10,8 +8,6 @@ interface DataProps {
 
 export default class Data extends React.Component<DataProps, {}> {
   render() {
-
-    console.log(updatetime)
     //<p>Site updated + {updatetime[0].time} </p>
     return(
       <div>

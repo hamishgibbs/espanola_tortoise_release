@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1436ad5aaa6225bd272aeef55a356ffb",
+    "revision": "e6a5d527c8b74f4a3529c998e7b9ffea",
     "url": "/espanola_tortoise_release/index.html"
   },
   {
-    "revision": "0cdc89e2571634ff18d2",
+    "revision": "f0dc0d0593a433be7b8b",
     "url": "/espanola_tortoise_release/static/css/2.ee241de9.chunk.css"
   },
   {
-    "revision": "6b49c9ca9b94764de73c",
+    "revision": "e34dec10929566c40bf5",
     "url": "/espanola_tortoise_release/static/css/main.3a0656b1.chunk.css"
   },
   {
-    "revision": "0cdc89e2571634ff18d2",
-    "url": "/espanola_tortoise_release/static/js/2.0d2a892f.chunk.js"
+    "revision": "f0dc0d0593a433be7b8b",
+    "url": "/espanola_tortoise_release/static/js/2.5517fade.chunk.js"
   },
   {
     "revision": "490c52c8fe2cdd714f9914e5ee54afc3",
-    "url": "/espanola_tortoise_release/static/js/2.0d2a892f.chunk.js.LICENSE.txt"
+    "url": "/espanola_tortoise_release/static/js/2.5517fade.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6b49c9ca9b94764de73c",
-    "url": "/espanola_tortoise_release/static/js/main.c90ef662.chunk.js"
+    "revision": "e34dec10929566c40bf5",
+    "url": "/espanola_tortoise_release/static/js/main.8c08e782.chunk.js"
   },
   {
     "revision": "efb666f0b3ed23b5c25e",
