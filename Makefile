@@ -8,18 +8,16 @@ SITE_DIR := ${PROJDIR}/docs
 R = /usr/local/bin/Rscript $^ $@
 
 
-default: process_data
+default: build_site
 
-push_site: ${SITE_DIR}/index.html
-	git -C docs/ add .
-	git -C docs/ commit -m "automatic site build"
-	git -C docs/ push
+build_site: pull_data process_data deploy_site
 
-build_website: ${SITE_DIR}/index.html ${DATA_DIR}/lines.rds ${DATA_DIR}/most_recent_points.rds ${DATA_DIR}/length_summary.rds
+deploy_site:
+	npm run deploy
 
 process_data: preprocess_data ${DATA_DIR}/lines.rds ${JSON_DIR}/most_recent_points.json ${JSON_DIR}/length_summary.json ${JSON_DIR}/events.json
 
-preprocess_data: pull_data ${DATA_DIR}/preprocessed_data.rds
+preprocess_data: ${DATA_DIR}/preprocessed_data.rds
 
 pull_data:
 	git pull
