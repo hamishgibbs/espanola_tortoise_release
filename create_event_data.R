@@ -46,7 +46,7 @@ get_lagged_distance <- function(data){
   return(data)
 }
 
-d <- lapply(d %>% group_by(id) %>% group_split(.keep = "all"), get_lagged_distance) 
+d <- lapply(d %>% group_by(id) %>% group_split(), get_lagged_distance) 
 
 d <- do.call(rbind, d)
 
